@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hồng Quân – Giải Bài Tập Tin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <header class="topbar">
+    <div class="brand">💻 HỒNG QUÂN</div>
+    <button id="musicButton" type="button">🔊 Bật nhạc</button>
+    <audio id="backgroundMusic" src="music.mp3" loop></audio>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="book-animation">📚</div>
+      <p class="eyebrow">TRUNG TÂM HỌC TẬP TRỰC TUYẾN</p>
+      <h1>Hồng Quân – <span>Giải Bài Tập Tin</span></h1>
+      <p class="intro">
+        Nhập KEY, gửi bài tập và nhận hỗ trợ học Tin học dễ dàng.
+      </p>
+      <a class="primary-link" href="#homework">Bắt đầu ngay ↓</a>
+    </section>
+
+    <section class="cards">
+      <article class="panel" id="homework">
+        <div class="panel-icon">📝</div>
+        <h2>Gửi bài tập</h2>
+        <p class="muted">Điền thông tin và nội dung bài cần hỗ trợ.</p>
+
+        <form id="orderForm">
+          <label for="studentName">Họ và tên</label>
+          <input id="studentName" name="studentName" required
+                 placeholder="Nhập họ tên">
+
+          <label for="studentClass">Lớp</label>
+          <input id="studentClass" name="studentClass" required
+                 placeholder="Ví dụ: 7A">
+
+          <label for="studentKey">KEY</label>
+          <input id="studentKey" name="studentKey" required
+                 placeholder="Nhập KEY của bạn">
+
+          <label for="lessonTitle">Tên bài / câu hỏi</label>
+          <input id="lessonTitle" name="lessonTitle" required
+                 placeholder="Ví dụ: Bài 3 – Tin học">
+
+          <label for="lessonContent">Nội dung bài tập</label>
+          <textarea id="lessonContent" name="lessonContent" rows="5"
+                    required placeholder="Nhập đề bài cần hỗ trợ..."></textarea>
+
+          <button class="submit-button" type="submit">Gửi bài tập</button>
+          <p id="orderStatus" class="status" aria-live="polite"></p>
+        </form>
+      </article>
+
+      <article class="panel" id="buy-key">
+        <div class="panel-icon">🔑</div>
+        <h2>Mua KEY</h2>
+        <p class="muted">Gửi yêu cầu mua KEY để quản trị viên liên hệ.</p>
+
+        <form id="keyForm">
+          <label for="buyerName">Họ và tên</label>
+          <input id="buyerName" name="buyerName" required
+                 placeholder="Nhập họ tên">
+
+          <label for="buyerContact">Email hoặc cách liên hệ</label>
+          <input id="buyerContact" name="buyerContact" required
+                 placeholder="Nhập email / thông tin liên hệ">
+
+          <label for="keyType">Loại KEY</label>
+          <select id="keyType" name="keyType" required>
+            <option value="">-- Chọn loại KEY --</option>
+            <option value="M1">KEY M1</option>
+            <option value="M2">KEY M2</option>
+            <option value="M3">KEY M3</option>
+            <option value="VV">KEY Vĩnh viễn</option>
+          </select>
+
+          <label for="keyQuantity">Số lượng</label>
+          <input id="keyQuantity" name="keyQuantity" type="number"
+                 min="1" max="20" value="1" required>
+
+          <label for="paymentMethod">Phương thức thanh toán dự kiến</label>
+          <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">-- Chọn phương thức --</option>
+            <option value="Chuyển khoản">Chuyển khoản</option>
+            <option value="Trao đổi trực tiếp">Trao đổi trực tiếp</option>
+            <option value="Khác">Khác / cần tư vấn</option>
+          </select>
+
+          <button class="submit-button" type="submit">Gửi yêu cầu mua KEY</button>
+          <p id="keyStatus" class="status" aria-live="polite"></p>
+        </form>
+      </article>
+    </section>
+
+    <section class="notice">
+      <span>✨</span>
+      <p>Gửi yêu cầu không đồng nghĩa với việc đã thanh toán hoặc được cấp KEY.
+         Quản trị viên sẽ liên hệ để xác nhận.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Hồng Quân – Giải Bài Tập Tin</footer>
+  <script src="script.js"></script>
+</body>
+</html>
